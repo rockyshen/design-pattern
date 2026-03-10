@@ -9,10 +9,12 @@ import lombok.Getter;
  */
 @Getter   // 不提供setter方法，对外不提供修改属性的方法
 public class User {
-    private final String name;   // 对象属性field一旦被声明为final，表示一旦赋某个值，就不能改了
+    // 1. final修饰field
+    private final String name;
     private final Integer age;
 
-    // 私有化User构造方法，不允许外部使用new User创建，只能用Builder
+    // 2.私有化构造方法
+    // 不允许外部使用new User创建，只能用Builder
     private User(Builder builder){
         this.name = builder.name;
         this.age = builder.age;

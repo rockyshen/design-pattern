@@ -22,5 +22,8 @@ public class Demo {
         User user = User.builder().name("tom").age(11).build();
         // 联想到stream流,stream()相当于builder的中间对象，map、filter相当于name、age方法中间操作、collect相当于build()中止操作
 //        myList.stream().map(String::valueOf).filter(e -> {e.length() > 1}).collect(Collectors.toList());
+
+        Student student = Student.builder().id("1").major("cs").name("tom").build();
+        System.out.println(student);
     }
 }
